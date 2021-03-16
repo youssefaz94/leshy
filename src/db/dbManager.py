@@ -6,7 +6,6 @@ from .exceptions import DbConnectionException
 
 _logger = lg.getLogger(__name__)
 
-#Singleton
 class DbManager(object):
     __instance = None
     __db = None
