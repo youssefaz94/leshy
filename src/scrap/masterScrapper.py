@@ -95,7 +95,7 @@ class MasterScrapper(object):
     def bootStrapConfig(cls):
         cls.setupSources()
         cls.setupWorkers()
-        cls._statusKeeper = WorkerStatus(worker_to_source_map=cls.__workers_to_source_map, master=cls.__instance, freq=7)
+        cls._statusKeeper = WorkerStatus(worker_to_source_map=cls.__workers_to_source_map, master=cls.__instance, freq=10)
         _logger.info("Status keeper started ...")
         cls._resolver = Resolver(sources=cls.__sources_to_workers_map["values"], worker_to_source_map=cls.__workers_to_source_map, master=cls.__instance, statuskeeper= cls._statusKeeper)
         _logger.info("Resolver started ...")
