@@ -20,10 +20,10 @@ class InstallCommand(install):
         install.run(self)
 
 
-setup(name='bastet',
+setup(name='leshy',
       packages=find_packages(),
-      author='Marouen Azzouz, Youssef Azzouz',
-      author_email='azzouz.marouen@gmail.com, youssef.azzouz1512@gmail.com',
+      author='Youssef Azzouz',
+      author_email='youssef.azzouz1512@gmail.com',
       version='0.1.0',
       zip_safe=False,
       classifiers=[
@@ -38,7 +38,7 @@ setup(name='bastet',
         'Programming Language :: Python :: 3.8',
     ],
       entry_points={
-          'console_scripts': ['bastet = src.main:main']
+          'console_scripts': ['leshy = src.main:main']
       },
       install_requires=INSTALL_REQUIREMENTS,
       tests_require=["pytest", ],
