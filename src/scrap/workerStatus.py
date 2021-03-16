@@ -47,14 +47,14 @@ class WorkerStatus:
             }
     
     def sendStatus(self):
-        _logger.info("Status Worker started ...")
+        _logger.info("Status Keeper started ...")
         try:
             while True:
                 time.sleep(self._freq)
                 status = self.getStatus()
                 _logger.info(status)
         except Exception as e:
-            _logger.info("Status Worker failed ...")
+            _logger.info("Status Keeper failed ...")
             raise
     
     def startDebrifer(self):
