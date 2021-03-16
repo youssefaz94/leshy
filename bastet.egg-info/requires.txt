@@ -1,5 +1,0 @@
-bs4
-stem
-requests
-requests[socks]
-fake_useragent
