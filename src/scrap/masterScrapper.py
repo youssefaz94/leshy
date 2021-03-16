@@ -74,7 +74,7 @@ class MasterScrapper(object):
         try:
             _logger.info("Setting up Workers")
             config = cls.__config["crypto"] if cls.__config else cls.__db.getTickersList(type="crypto")
-            for curr in [config[3]]:
+            for curr in config:
                 _source = cls.__sources_to_workers_map["crypto"]["val"][-1] # for every worker lets take a single source for now
                 _worker = Worker(master=cls.__instance, source=_source, fromCurr=cls.__db.getTickers_spec(type="crypto", ticker=curr)["currency"], toCurr=curr) # for now the value of every currency is regarding usd
                 cls.__workers.append(_worker)
