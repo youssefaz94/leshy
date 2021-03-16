@@ -1,0 +1,3 @@
+[console_scripts]
+bastet = src.main:main
+
